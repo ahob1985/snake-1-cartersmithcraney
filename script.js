@@ -1,10 +1,20 @@
-// Author:
+// Author: Carter Smith Craney
 
 // Global UI Variables
-//let canvasDiv;
+let canvasDiv; 
+let canvas;
+let textDiv; 
+let textP;
+let buttonDiv;
+let resetButton;
 
 // Global Game Variables
-//let snake;
+let snake;
+let food;
+let resolution; 
+let scaledWidth;
+let scaledHeight;
+let score;
 
 function setup() {
   // Build the interface
@@ -21,11 +31,13 @@ function setup() {
 
 function draw() {
   // Scale the canvas according to resolution, then refresh the background
-
+scale(resolution); 
+background(20);
   // Check if snake is eating the food
 
   // Draw the snake
-
+snake.update(); 
+snake.show();
   // Draw the food
 
   // Check for game over
@@ -41,5 +53,5 @@ function keyPressed() {
 }
 
 function resetGame() {
-
+snake = new Snake();
 }
